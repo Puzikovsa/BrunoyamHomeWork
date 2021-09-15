@@ -28,6 +28,6 @@ public class HomeWork {
         HomeWork n1 = new HomeWork();
         n1.printHello("Anna");
         System.out.println(n1.sumTwoInt(4,31));
-        System.out.println(n1.isPalindrome("BudaduB"));
+        System.out.println(n1.isPalindrome("BuraruB"));
     }
 }
