@@ -33,7 +33,7 @@ public class Calculator {
                 case "*" -> current *= numberInput;
                 case "/" -> current /= numberInput;
             }
-            System.out.println("Рузультат операции: " + current);
+            System.out.println("Результат операции: " + current);
         }
     }
 }

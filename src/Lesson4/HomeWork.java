@@ -2,17 +2,17 @@ package Lesson4;
 
 public class HomeWork {
     //#1
-    public void printHello(String name){
+    public static void printHello(String name){
         System.out.println("Hello, " + name + "!");
     }
 
     //#2
-    public int sumTwoInt(int a, int b){
+    public static int sumTwoInt(int a, int b){
         return a + b;
     }
 
     //#3
-    public String isPalindrome(String str){
+    public static String isPalindrome(String str){
         char[] array = str.toCharArray();
         boolean isPal = true;
         for (int i = 0; i < array.length; i++) {
@@ -24,10 +24,19 @@ public class HomeWork {
         return isPal? "Представленная строка - палиндром." : "Представленная строка - не палиндром.";
     }
 
+    //самостоятельный метод
+    public static void printProduct(Products code){
+        System.out.println(code);
+    }
+
     public static void main(String[] args) {
-        HomeWork n1 = new HomeWork();
-        n1.printHello("Anna");
-        System.out.println(n1.sumTwoInt(4,31));
-        System.out.println(n1.isPalindrome("BuraruB"));
+        printHello("John");
+        System.out.println(sumTwoInt(26,31));
+        System.out.println(isPalindrome("DubabuD"));
+        System.out.println();
+        printHello("Сергей!");
+        System.out.println(sumTwoInt(12,14));
+        System.out.println(isPalindrome("Приорат"));
+        printProduct(Products.MILK);
     }
 }
