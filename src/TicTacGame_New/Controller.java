@@ -22,9 +22,10 @@ public class Controller {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите первого игрока");
-        System.out.println("Это компьютер? Введите yes или no");
+        System.out.println("Это компьютер? ");
+        System.out.println("Если да, введите 1. Если нет - любое другое число");
         String gamer = scan.nextLine();
-        if (gamer.equals("yes")) {
+        if (gamer.equals("1")) {
             player1 = new ComputerPlayer(Cell.CROSS, "Computer1");
             System.out.println("Первый игрок - " + player1.getName() + ". Он ставит " + Cell.CROSS.meaning);
             System.out.println();
@@ -42,9 +43,10 @@ public class Controller {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Введите второго игрока");
-        System.out.println("Это компьютер? Введите yes или no");
+        System.out.println("Это компьютер? ");
+        System.out.println("Если да, введите 1. Если нет - любое другое число");
         String gamer1 = scan.nextLine();
-        if (gamer1.equals("yes")) {
+        if (gamer1.equals("1")) {
             player2 = new ComputerPlayer(Cell.ZERO, "Computer2");
             System.out.println("Второй игрок - " + player2.getName() + ". Он ставит " + player2.getTeam());
             System.out.println();
@@ -60,7 +62,6 @@ public class Controller {
 
     public static void selectPlayer(){
         player = player1;
-        System.out.println(player.getName());
         player.move();
     }
     public static void changePlayer() {
@@ -69,7 +70,6 @@ public class Controller {
         } else {
             player = player1;
         }
-        System.out.println(player.getName());
         player.move();
     }
 
