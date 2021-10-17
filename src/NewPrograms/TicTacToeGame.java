@@ -10,7 +10,7 @@ public class TicTacToeGame {
 
         System.out.println("Вас приветствует игра КРЕСТИКИ-НОЛИКИ!");
         //создаем игровое поле
-        String[][] playingField = new String[3][3];
+        String[][] playingField = new String[4][4];
         for (String[] strings : playingField) {
             for (int j = 0; j < strings.length; j++) {
                 Arrays.fill(strings, "_");
@@ -18,6 +18,7 @@ public class TicTacToeGame {
         }
         printArray(playingField);
         System.out.println("Игровое поле создано");
+        System.out.println("Нумерация полей от 0 до 3");
         System.out.println();
         String cellValue;
         String name;
@@ -87,18 +88,18 @@ public class TicTacToeGame {
     public static String checkWin(String[][] array) {
         String result = "";
         for (String[] strings : array) {
-            if (strings[0].equals(strings[1]) && strings[1].equals(strings[2]) && !strings[2].equals("_")) {
+            if (array[0].equals(array[1]) && array[1].equals(array[2]) && array[2].equals(array[3]) && !array[3].equals("_")) {
                 result = strings[0];
                 break;
             }
             for (int j = 0; j < strings.length; j++) {
-                if (array[0][j].equals(array[1][j]) && array[1][j].equals(array[2][j]) && !array[2][j].equals("_")) {
+                if (array[0][j].equals(array[1][j]) && array[1][j].equals(array[2][j]) && array[2][j].equals(array[3][j]) && !array[3][j].equals("_")) {
                     result = array[0][j];
                     break;
-                } else if (array[0][0].equals(array[1][1]) && array[1][1].equals(array[2][2]) && !array[2][2].equals("_")) {
+                } else if (array[0][0].equals(array[1][1]) && array[1][1].equals(array[2][2]) && array[2][2].equals(array[3][3]) && !array[3][3].equals("_")) {
                     result = array[0][0];
                     break;
-                } else if (array[2][0].equals(array[1][1]) && array[1][1].equals(array[0][2]) && !array[0][2].equals("_")) {
+                } else if (array[3][0].equals(array[2][1]) && array[2][1].equals(array[1][2]) && array[1][2].equals(array[0][3]) && !array[0][3].equals("_")) {
                     result = array[2][0];
                     break;
                 } else result = "unknown";
