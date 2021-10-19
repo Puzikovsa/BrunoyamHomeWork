@@ -1,4 +1,5 @@
 package TicTacGame_New;
+
 import java.util.Scanner;
 
 public class HumanPlayer extends Player {
@@ -13,7 +14,7 @@ public class HumanPlayer extends Player {
         gameMove(Controller.player);
     }
 
-   private void gameMove(Player player){
+    private void gameMove(Player player) {
         player = Controller.player;
         int size = Field.getSize();
         Scanner scanner = new Scanner(System.in);
@@ -37,7 +38,7 @@ public class HumanPlayer extends Player {
                 System.out.println("Вы ошиблись");
             }
         }
-        System.out.println("Переход хода");
+        Checks.checkWinner(Field.getField());
         Controller.changePlayer();
     }
 }

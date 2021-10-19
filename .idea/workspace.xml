@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1a7a63c4-276a-451d-b711-a20bed954c5c" name="Changes" comment="TicTack 17.10 v.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/HumanPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/HumanPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/ComputerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/ComputerPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/Checks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/Checks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/HumanPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,16 +148,5 @@
     <MESSAGE value="TicTack 17.10" />
     <MESSAGE value="TicTack 17.10 v.1" />
     <option name="LAST_COMMIT_MESSAGE" value="TicTack 17.10 v.1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/TicTacGame_New/Controller.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

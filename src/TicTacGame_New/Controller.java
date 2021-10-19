@@ -65,12 +65,26 @@ public class Controller {
         player.move();
     }
     public static void changePlayer() {
-        if(player == player1) {
-            player = player2;
+        if (endGameSignal() == true) {
+            System.out.println("Игра окончена.");
+            System.out.println("Победил " + player.getName());
+            endGame();
         } else {
-            player = player1;
+            System.out.println("Переход хода");
+            if (player == player1) {
+                player = player2;
+            } else {
+                player = player1;
+            }
+            player.move();
         }
-        player.move();
+    }
+
+    public static boolean endGameSignal() {
+        return !Checks.checkWinner(Field.getField()).equals(Cell.EMPTY);
+    }
+
+    public static void endGame(){
     }
 
 }
