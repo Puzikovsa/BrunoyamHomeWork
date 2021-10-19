@@ -8,16 +8,23 @@ public class Checks {
     }
 
     public static Cell checkWinner(Cell[][] field) {
+        int count = 0;
 //        проверка строк
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field.length - 1; j++) {
-                if(!field[i][j].equals(Cell.EMPTY) && !field[i][j].equals(field[i][j + 1])){
+                if (field[i][j].equals(Cell.EMPTY)) {
                     break;
-                } else return field[i][j];
-
+                } else {
+                    if (field[i][j].equals(field[i][j + 1])) {
+                        count += 1;
+                    } else
+                        break;
+                }
+                if (count == field.length - 1) {
+                    return field[i][j];
+                }
             }
-
         }
-        return field[0][0];
+        return field[1][1];
     }
 }
