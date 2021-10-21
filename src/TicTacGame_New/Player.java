@@ -1,8 +1,8 @@
 package TicTacGame_New;
 
 public abstract class Player {
-    private Cell team;
-    private String name;
+    private final Cell team;
+    private final String name;
 
     public Player(Cell team, String name) {
         this.team = team;

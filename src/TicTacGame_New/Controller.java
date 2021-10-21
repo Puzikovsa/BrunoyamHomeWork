@@ -39,7 +39,7 @@ public class Controller {
         twoGamer();
     }
 
-    public static void twoGamer(){
+    public static void twoGamer() {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Введите второго игрока");
@@ -60,14 +60,13 @@ public class Controller {
         selectPlayer();
     }
 
-    public static void selectPlayer(){
+    public static void selectPlayer() {
         player = player1;
         player.move();
     }
+
     public static void changePlayer() {
-        if (endGameSignal() == true) {
-            System.out.println("Игра окончена.");
-            System.out.println("Победил " + player.getName());
+        if (Checks.stopGame()) {
             endGame();
         } else {
             System.out.println("Переход хода");
@@ -80,11 +79,8 @@ public class Controller {
         }
     }
 
-    public static boolean endGameSignal() {
-        return !Checks.checkWinner(Field.getField()).equals(Cell.EMPTY);
+    public static void endGame() {
+        System.out.println("Игра окончена.");
+        System.out.println("Победил " + player.getName());
     }
-
-    public static void endGame(){
-    }
-
 }

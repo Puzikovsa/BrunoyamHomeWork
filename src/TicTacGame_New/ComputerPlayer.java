@@ -11,11 +11,11 @@ public class ComputerPlayer extends Player {
 
     @Override
     void move() {
-        gameMove(Controller.player);
+        gameMove();
     }
 
-    private void gameMove(Player player) {
-        player = Controller.player;
+    private void gameMove() {
+        Player player = Controller.player;
         int size = Field.getSize();
         while (true) {
             Random ran = new Random(size - 1);

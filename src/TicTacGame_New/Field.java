@@ -44,32 +44,4 @@ public class Field {
         }
         System.out.println();
     }
-
-//    public Cell checkWinner() {
-//        for (int i = 0; i < field.length; i++) {
-//            // совпадение элементов в строке
-//            if (field[i][0].equals(field[i][1]) && field[i][1].equals(field[i][2]) && !field[i][2].equals(Cell.EMPTY)) {
-//                return field[i][0];
-//            }
-//            // совпадение элементов в столбце
-//            if (field[0][i].equals(field[1][i]) && field[1][i].equals(field[2][i]) && !field[2][i].equals(Cell.EMPTY)) {
-//                return field[0][i];
-//            }
-//        }
-//        if (field[0][0].equals(field[1][1]) && field[1][1].equals(field[2][2]) && !field[2][2].equals(Cell.EMPTY)) {
-//            return field[0][0];
-//        }
-//        if (field[0][2].equals(field[1][1]) && field[1][1].equals(field[2][0]) && !field[2][0].equals(Cell.EMPTY)) {
-//            return field[1][1];
-//        }
-//        return Cell.EMPTY;
-//    }
-//
-//    public boolean setValue(int row, int column, Cell playerSign) {
-//        if (isEmpty(row, column)) {
-//            field[row][column] = playerSign;
-//            return true;
-//        }
-//        return false;
-//    }
 }
