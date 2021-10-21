@@ -40,7 +40,6 @@ public class HumanPlayer extends Player {
                 System.out.println("Вы ошиблись");
             }
         }
-        Checks.firstCheckWinner(Field.getField());
         Controller.changePlayer();
     }
 }

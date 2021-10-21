@@ -66,8 +66,10 @@ public class Controller {
     }
 
     public static void changePlayer() {
-        if (Checks.stopGame()) {
-            endGame();
+        if (Checks.checkWinner() == Cell.CROSS) {
+            endGame(Cell.CROSS);
+        } else if (Checks.isBusy()) {
+            endGameBusy();
         } else {
             System.out.println("Переход хода");
             if (player == player1) {
@@ -79,8 +81,13 @@ public class Controller {
         }
     }
 
-    public static void endGame() {
+    public static void endGame(Cell cell) {
         System.out.println("Игра окончена.");
-        System.out.println("Победил " + player.getName());
+        System.out.println("Победил " + cell.name());
+    }
+
+    public static void endGameBusy(){
+        System.out.println("Игра окончена.");
+        System.out.println("Ничья!");
     }
 }

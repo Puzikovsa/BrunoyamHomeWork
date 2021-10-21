@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a7a63c4-276a-451d-b711-a20bed954c5c" name="Changes" comment="TicTack 19.10 v.2">
+    <list default="true" id="1a7a63c4-276a-451d-b711-a20bed954c5c" name="Changes" comment="TicTack 21.10 v.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/Checks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/Checks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/ComputerPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/ComputerPlayer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/HumanPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/HumanPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/Checks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/Checks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/ComputerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/ComputerPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/Field.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/HumanPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634650131819</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="TicTack 21.10 v.1">
+      <created>1634792541576</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1634792541576</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,6 +174,7 @@
     <MESSAGE value="TicTack 17.10 v.1" />
     <MESSAGE value="TicTack 19.10 v.1" />
     <MESSAGE value="TicTack 19.10 v.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="TicTack 19.10 v.2" />
+    <MESSAGE value="TicTack 21.10 v.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="TicTack 21.10 v.1" />
   </component>
 </project>
