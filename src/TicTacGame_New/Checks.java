@@ -8,15 +8,13 @@ public class Checks {
     }
 
     public static boolean checkWinner(Player player) {
-        boolean resalt = true;
+        boolean resalt = false;
         for (int i = 0; i < field.length; i++) {
-            for (int j = 1; j < field[i].length; j++) {
-                if (field[i][0] == Cell.EMPTY || !field[i][j - 1].equals (field[i][j])) {
-                    resalt = false;
+            for (int j = 1; j < field[i].length - 1; j++) {
+                if (field[i][j] == Cell.EMPTY || !field[i][j - 1].equals(field[i][j]) || !field[i][j].equals(field[i][j + 1]))
+                {
                     break;
-                } else {
-                    resalt = true;
-                }
+                } else resalt = true;
             }
         }
         System.out.println(resalt);
