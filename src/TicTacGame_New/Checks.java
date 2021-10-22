@@ -7,33 +7,23 @@ public class Checks {
         return field[row][column] == Cell.EMPTY;
     }
 
-    public static Cell checkWinner() {
+    public static boolean checkWinner(Player player) {
+        boolean resalt = false;
         int count = 0;
         int count1 = 0;
-        int count2 = 0;
-        Cell resalt = null;
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field[i].length; j++) {
                 count += field[i][j].sum;
-                    }
-                }
-        System.out.println(count);
-        if (count == Cell.CROSS.sum * field.length){
-            resalt = Cell.CROSS;
-        } else if(count == Cell.ZERO.sum * field.length ){
-            resalt = Cell.ZERO;
+            }
+            count1 = count;
+            System.out.println(count1);
+            if (count1 == player.getSum() * field.length) {
+                resalt = true;
+            }
         }
+        System.out.println(resalt);
         return resalt;
-        }
-//        for (int i = 0; i < field.length - 1; i++) {
-//            for (int j = field.length - 1; j < 0; j--) {
-//                if (!field[i][j].equals(Cell.EMPTY) && field[i][j].equals(field[i + 1][j - 1])) {
-//                    win = true;
-//                } else break;
-//            }
-//        }
-//        return win;
-//    }
+    }
 
     public static boolean isBusy() {
         boolean busy = false;
@@ -42,7 +32,7 @@ public class Checks {
                 if (field[i][j].equals(Cell.EMPTY)) {
                     busy = false;
                     break;
-                } else  busy = true;
+                } else busy = true;
             }
         }
         return busy;
