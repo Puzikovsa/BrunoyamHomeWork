@@ -1,15 +1,13 @@
 package TicTacGame_New;
 
 public enum Cell {
-    EMPTY("_ ", 0),
-    CROSS("X ", 20),
-    ZERO("0 ", 10);
+    EMPTY("_ "),
+    CROSS("X "),
+    ZERO("0 ");
 
     String meaning;
-    int sum;
 
-    Cell(String meaning, int sum) {
+    Cell(String meaning) {
         this.meaning = meaning;
-        this.sum = sum;
     }
 }

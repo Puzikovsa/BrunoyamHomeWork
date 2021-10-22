@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class HumanPlayer extends Player {
 
 
-    public HumanPlayer(Cell team, String name, int sum) {
-        super(team, name, sum);
+    public HumanPlayer(Cell team, String name) {
+        super(team, name);
     }
 
     @Override

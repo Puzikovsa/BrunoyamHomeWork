@@ -26,13 +26,13 @@ public class Controller {
         System.out.println("Если да, введите 1. Если нет - любое другое число");
         String gamer = scan.nextLine();
         if (gamer.equals("1")) {
-            player1 = new ComputerPlayer(Cell.CROSS, "Computer1", Cell.CROSS.sum);
+            player1 = new ComputerPlayer(Cell.CROSS, "Computer1");
             System.out.println("Первый игрок - " + player1.getName() + ". Он ставит " + Cell.CROSS.meaning);
             System.out.println();
         } else {
             System.out.println("Как Вас зовут?");
             String name = scan.nextLine();
-            player1 = new HumanPlayer(Cell.CROSS, name, Cell.CROSS.sum);
+            player1 = new HumanPlayer(Cell.CROSS, name);
             System.out.println("Первый игрок - " + name + ". Он ставит " + Cell.CROSS.meaning);
             System.out.println();
         }
@@ -47,13 +47,13 @@ public class Controller {
         System.out.println("Если да, введите 1. Если нет - любое другое число");
         String gamer1 = scan.nextLine();
         if (gamer1.equals("1")) {
-            player2 = new ComputerPlayer(Cell.ZERO, "Computer2", Cell.ZERO.sum);
+            player2 = new ComputerPlayer(Cell.ZERO, "Computer2");
             System.out.println("Второй игрок - " + player2.getName() + ". Он ставит " + player2.getTeam());
             System.out.println();
         } else {
             System.out.println("Как Вас зовут?");
             String player2Name = scan.nextLine();
-            player2 = new HumanPlayer(Cell.ZERO, player2Name, Cell.ZERO.sum);
+            player2 = new HumanPlayer(Cell.ZERO, player2Name);
             System.out.println("Второй игрок - " + player2Name + ". Он ставит " + player2.getTeam());
             System.out.println();
         }
@@ -83,7 +83,7 @@ public class Controller {
 
     public static void endGame() {
         System.out.println("Игра окончена.");
-        System.out.println("Победил " + player);
+        System.out.println("Победил " + player.getName());
     }
 
     public static void endGameBusy(){

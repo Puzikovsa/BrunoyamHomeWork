@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a7a63c4-276a-451d-b711-a20bed954c5c" name="Changes" comment="TicTack 21.10 v.2sum">
+    <list default="true" id="1a7a63c4-276a-451d-b711-a20bed954c5c" name="Changes" comment="TicTack 22.10 v.1sum">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/Cell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/Checks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/Checks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/brunoyam/TicTacGame_New/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/Checks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/Checks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/ComputerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/ComputerPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacGame_New/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacGame_New/Controller.java" afterDir="false" />
@@ -29,6 +32,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1yRJOA6Dc7qEoLN0jATC6ewAs7H" />
   <component name="ProjectViewState">
@@ -160,8 +171,26 @@
       <option name="project" value="LOCAL" />
       <updated>1634820177942</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="TicTack 22.10 v.1sum">
+      <created>1634902721348</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1634902721348</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -182,6 +211,12 @@
     <MESSAGE value="TicTack 19.10 v.2" />
     <MESSAGE value="TicTack 21.10 v.1" />
     <MESSAGE value="TicTack 21.10 v.2sum" />
-    <option name="LAST_COMMIT_MESSAGE" value="TicTack 21.10 v.2sum" />
+    <MESSAGE value="TicTack 22.10 v.1sum" />
+    <option name="LAST_COMMIT_MESSAGE" value="TicTack 22.10 v.1sum" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/games$Main.ic" NAME="Main Coverage Results" MODIFIED="1634923118814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>TicTacGame_New.*</FILTER>
+    </SUITE>
   </component>
 </project>

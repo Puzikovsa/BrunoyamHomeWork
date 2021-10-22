@@ -5,8 +5,8 @@ import java.util.Random;
 public class ComputerPlayer extends Player {
 
 
-    public ComputerPlayer(Cell team, String name, int sum) {
-        super(team, name, sum);
+    public ComputerPlayer(Cell team, String name) {
+        super(team, name);
     }
 
     @Override

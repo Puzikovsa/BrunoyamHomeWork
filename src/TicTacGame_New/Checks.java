@@ -8,21 +8,28 @@ public class Checks {
     }
 
     public static boolean checkWinner(Player player) {
-        boolean resalt = false;
-        int count = 0;
-        int count1 = 0;
+        boolean resalt = true;
         for (int i = 0; i < field.length; i++) {
-            for (int j = 0; j < field[i].length; j++) {
-                count += field[i][j].sum;
-            }
-            count1 = count;
-            System.out.println(count1);
-            if (count1 == player.getSum() * field.length) {
-                resalt = true;
+            for (int j = 1; j < field[i].length; j++) {
+                if (field[i][0] == Cell.EMPTY || !field[i][j - 1].equals (field[i][j])) {
+                    resalt = false;
+                    break;
+                } else {
+                    resalt = true;
+                }
             }
         }
         System.out.println(resalt);
         return resalt;
+    }
+
+    public static boolean isLineWiner(String[] line){
+        for (int i = 0; i < line.length - 1; i++){
+            if(!line[i].equals(line[i + 1])){
+                break;
+            }
+        }
+        return true;
     }
 
     public static boolean isBusy() {
