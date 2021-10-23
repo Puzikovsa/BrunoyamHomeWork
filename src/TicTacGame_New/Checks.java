@@ -10,11 +10,24 @@ public class Checks {
     public static boolean checkWinner(Player player) {
         boolean resalt = false;
         for (int i = 0; i < field.length; i++) {
-            for (int j = 1; j < field[i].length - 1; j++) {
-                if (field[i][j] == Cell.EMPTY || !field[i][j - 1].equals(field[i][j]) || !field[i][j].equals(field[i][j + 1]))
-                {
+            for (int j = 1; j < field[i].length; j++) {
+                if (!field[i][j].equals(Cell.EMPTY)) {
+                    resalt = true;
+                }else {
+                    resalt = false;
                     break;
-                } else resalt = true;
+                }
+            }
+        }
+        System.out.println(resalt);
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length - 1; j++) {
+                if (field[i][j].equals(field[i][j + 1])) {
+                    resalt = true;
+                } else {
+                    resalt = false;
+                    break;
+                }
             }
         }
         System.out.println(resalt);
