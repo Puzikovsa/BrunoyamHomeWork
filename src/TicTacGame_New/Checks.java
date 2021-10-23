@@ -10,37 +10,37 @@ public class Checks {
     public static boolean checkWinner(Player player) {
         boolean resalt = false;
         for (int i = 0; i < field.length; i++) {
-            for (int j = 1; j < field[i].length; j++) {
-                if (!field[i][j].equals(Cell.EMPTY)) {
+            if (!field[i][0].equals(Cell.EMPTY) && isLineWinner(i))  {
                     resalt = true;
-                }else {
-                    resalt = false;
                     break;
-                }
+                } else
+            {
+
             }
-        }
-        System.out.println(resalt);
-        for (int i = 0; i < field.length; i++) {
-            for (int j = 0; j < field[i].length - 1; j++) {
-                if (field[i][j].equals(field[i][j + 1])) {
-                    resalt = true;
-                } else {
-                    resalt = false;
-                    break;
-                }
             }
-        }
-        System.out.println(resalt);
         return resalt;
     }
 
-    public static boolean isLineWiner(String[] line){
-        for (int i = 0; i < line.length - 1; i++){
-            if(!line[i].equals(line[i + 1])){
+    public static boolean isLineWinner(int s){
+        boolean line = true;
+        for (int i = 0; i < field.length - 1; i++){
+            if(!field[s][i].equals(field[s][i + 1])){
+                line = false;
                 break;
             }
         }
-        return true;
+        return line;
+    }
+
+    public static boolean isColumnWinner(int s) {
+        boolean column = true;
+        for (int i = 0; i < field.length; i++) {
+            if (!field[s][i].equals(field[s][i + 1])) {
+                column = false;
+                break;
+            }
+        }
+        return column;
     }
 
     public static boolean isBusy() {
