@@ -7,24 +7,32 @@ public class Checks {
         return field[row][column] == Cell.EMPTY;
     }
 
-    public static boolean checkWinner(Player player) {
+    public static boolean checkWinner(Player player){
+        boolean check = true;
+//        if (firsrCheckWinner()){
+//            check = true;
+//        } else {
+            if (isColumnWinner()) {
+                check = false;
+            }
+        return check;
+    }
+
+    public static boolean firsrCheckWinner() {
         boolean resalt = false;
         for (int i = 0; i < field.length; i++) {
-            if (!field[i][0].equals(Cell.EMPTY) && isLineWinner(i))  {
-                    resalt = true;
-                    break;
-                } else
-            {
-
+            if (!field[i][0].equals(Cell.EMPTY) && isLineWinner(i)) {
+                resalt = true;
+                break;
             }
-            }
+        }
         return resalt;
     }
 
-    public static boolean isLineWinner(int s){
+    public static boolean isLineWinner(int s) {
         boolean line = true;
-        for (int i = 0; i < field.length - 1; i++){
-            if(!field[s][i].equals(field[s][i + 1])){
+        for (int i = 0; i < field.length - 1; i++) {
+            if (!field[s][i].equals(field[s][i + 1])) {
                 line = false;
                 break;
             }
@@ -32,12 +40,14 @@ public class Checks {
         return line;
     }
 
-    public static boolean isColumnWinner(int s) {
+    public static boolean isColumnWinner() {
         boolean column = true;
         for (int i = 0; i < field.length; i++) {
-            if (!field[s][i].equals(field[s][i + 1])) {
-                column = false;
-                break;
+            for (int j = 0; j < field[i].length - 1; j++) {
+                if (!field[0][j].equals(Cell.EMPTY) && !field[i][j].equals(field[i][j + 1])) {
+                    column = false;
+                    break;
+                }
             }
         }
         return column;
