@@ -9,11 +9,10 @@ public class Checks {
 
     public static boolean checkWinner(Player player){
         boolean check = true;
-//        if (firsrCheckWinner()){
-//            check = true;
-//        } else {
-            if (isColumnWinner()) {
-                check = false;
+        if (firsrCheckWinner()){
+            check = true;
+        } else if (isColumnWinner()){
+                check = true;
             }
         return check;
     }
@@ -42,12 +41,23 @@ public class Checks {
 
     public static boolean isColumnWinner() {
         boolean column = true;
-        for (int i = 0; i < field.length; i++) {
-            for (int j = 0; j < field[i].length - 1; j++) {
-                if (!field[0][j].equals(Cell.EMPTY) && !field[i][j].equals(field[i][j + 1])) {
+        for (int i = 0; i < field.length - 1; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+                if (!field[0][j].equals(Cell.EMPTY) && isSecondColumnWinner(j)) {
                     column = false;
                     break;
                 }
+            }
+        }
+        return column;
+    }
+
+    public static boolean isSecondColumnWinner(int s) {
+        boolean column = true;
+        for (int i = 0; i < field.length - 1; i++) {
+            if (!field[i][s].equals(field[i + 1][s])) {
+                column = false;
+                break;
             }
         }
         return column;
