@@ -27,13 +27,13 @@ public class Controller {
         String gamer = scan.nextLine();
         if (gamer.equals("1")) {
             player1 = new ComputerPlayer(Cell.CROSS, "Computer1");
-            System.out.println("Первый игрок - " + player1.getName() + ". Он ставит " + Cell.CROSS.meaning);
+            System.out.println("Первый игрок - " + player1.getName() + ". Он ставит " + player1.getTeam().meaning);
             System.out.println();
         } else {
             System.out.println("Как Вас зовут?");
             String name = scan.nextLine();
             player1 = new HumanPlayer(Cell.CROSS, name);
-            System.out.println("Первый игрок - " + name + ". Он ставит " + Cell.CROSS.meaning);
+            System.out.println("Первый игрок - " + name + ". Он ставит " + player1.getTeam().meaning);
             System.out.println();
         }
         twoGamer();
@@ -48,13 +48,13 @@ public class Controller {
         String gamer1 = scan.nextLine();
         if (gamer1.equals("1")) {
             player2 = new ComputerPlayer(Cell.ZERO, "Computer2");
-            System.out.println("Второй игрок - " + player2.getName() + ". Он ставит " + player2.getTeam());
+            System.out.println("Второй игрок - " + player2.getName() + ". Он ставит " + player2.getTeam().meaning);
             System.out.println();
         } else {
             System.out.println("Как Вас зовут?");
             String player2Name = scan.nextLine();
             player2 = new HumanPlayer(Cell.ZERO, player2Name);
-            System.out.println("Второй игрок - " + player2Name + ". Он ставит " + player2.getTeam());
+            System.out.println("Второй игрок - " + player2Name + ". Он ставит " + player2.getTeam().meaning);
             System.out.println();
         }
         selectPlayer();
@@ -72,7 +72,7 @@ public class Controller {
             endGameBusy();
         } else {
             System.out.println("Переход хода");
-            if (player == player1) {
+            if (player.equals(player1)) {
                 player = player2;
             } else {
                 player = player1;

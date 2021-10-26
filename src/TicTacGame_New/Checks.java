@@ -93,7 +93,7 @@ public class Checks {
     public static boolean isLeftDiagonalWinner() {
         boolean leftDiagonal = false;
         for (int i = field.length - 1; i >= 0; i--) {
-            if (!field[i][0].equals(Cell.EMPTY) && isSecondLeftDiagonal()) {
+            if (!field[field.length - 1][0].equals(Cell.EMPTY) && isSecondLeftDiagonal()) {
                 leftDiagonal = true;
                 break;
             }
