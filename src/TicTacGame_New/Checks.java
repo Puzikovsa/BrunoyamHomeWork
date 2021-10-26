@@ -17,8 +17,9 @@ public class Checks {
         }
             if (isRightDiagonalWinner()) {
             check = true;
-//        } else if (isLeftDiagonalWinner()) {
-//            check = true;
+        }
+            if (isLeftDiagonalWinner()) {
+            check = true;
         }
         return check;
     }
