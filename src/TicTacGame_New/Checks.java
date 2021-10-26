@@ -7,18 +7,18 @@ public class Checks {
         return field[row][column] == Cell.EMPTY;
     }
 
-    public static boolean checkWinner(Player player){
+    public static boolean checkWinner(Player player) {
         boolean check = false;
         if (isfirsrLineWinner()) {
             check = true;
-        } else
-//            if (isFirstColumnWinner()){
-//                check = true;
-//            } else
+        }
+            if (isFirstColumnWinner()) {
+            check = true;
+        }
             if (isRightDiagonalWinner()) {
             check = true;
-        } else if (isLeftDiagonalWinner()){
-            check = true;
+//        } else if (isLeftDiagonalWinner()) {
+//            check = true;
         }
         return check;
     }
@@ -48,17 +48,17 @@ public class Checks {
     public static boolean isFirstColumnWinner() {
         boolean column = false;
         for (int i = 0; i < field[i].length - 1; i++) {
-                if (!field[0][i].equals(Cell.EMPTY) && isSecondColumnWinner(i)) {
-                    column = true;
-                    break;
-                }
+            if (!field[0][i].equals(Cell.EMPTY) && isSecondColumnWinner(i)) {
+                column = true;
+                break;
             }
+        }
         return column;
     }
 
-    public static boolean isSecondColumnWinner(int s){
+    public static boolean isSecondColumnWinner(int s) {
         boolean column = true;
-        for (int i = 0; i < field[i].length; i++) {
+        for (int i = 0; i < field[i].length - 1; i++) {
             if (!field[i][s].equals(field[i + 1][s])) {
                 column = false;
                 break;
@@ -67,21 +67,21 @@ public class Checks {
         return column;
     }
 
-    public static boolean isRightDiagonalWinner(){
+    public static boolean isRightDiagonalWinner() {
         boolean rightDiagonal = false;
         for (int i = 0; i < field.length; i++) {
-                if (!field[i][i].equals(Cell.EMPTY) && isSecondRightDiagonal()) {
-                    rightDiagonal = true;
-                    break;
-                }
+            if (!field[i][i].equals(Cell.EMPTY) && isSecondRightDiagonal()) {
+                rightDiagonal = true;
+                break;
             }
+        }
         return rightDiagonal;
     }
 
-    public static boolean isSecondRightDiagonal(){
+    public static boolean isSecondRightDiagonal() {
         boolean rightDiagonal = true;
         for (int i = 0; i < field.length - 1; i++) {
-            if(!field[i][i].equals(field[i + 1][i + 1])) {
+            if (!field[i][i].equals(field[i + 1][i + 1])) {
                 rightDiagonal = false;
                 break;
             }
@@ -89,18 +89,18 @@ public class Checks {
         return rightDiagonal;
     }
 
-    public static boolean isLeftDiagonalWinner(){
+    public static boolean isLeftDiagonalWinner() {
         boolean leftDiagonal = false;
         for (int i = field.length - 1; i >= 0; i--) {
-                if (!field[i][0].equals(Cell.EMPTY) && isSecondLeftDiagonal()) {
-                    leftDiagonal = true;
-                    break;
-                }
+            if (!field[i][0].equals(Cell.EMPTY) && isSecondLeftDiagonal()) {
+                leftDiagonal = true;
+                break;
             }
+        }
         return leftDiagonal;
     }
 
-    public static boolean isSecondLeftDiagonal(){
+    public static boolean isSecondLeftDiagonal() {
         boolean leftDiagonal = true;
         for (int i = field.length - 1; i > 0; i--) {
             if (!field[i][field.length - i - 1].equals(field[i - 1][field.length - i])) {
