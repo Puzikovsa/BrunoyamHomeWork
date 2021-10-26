@@ -7,7 +7,7 @@ public class Checks {
         return field[row][column] == Cell.EMPTY;
     }
 
-    public static boolean checkWinner(Player player) {
+    public static boolean checkWinner() {
         boolean check = false;
         if (isfirsrLineWinner()) {
             check = true;
@@ -113,13 +113,13 @@ public class Checks {
     }
 
     public static boolean isBusy() {
-        boolean busy = false;
+        boolean busy = true;
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field.length; j++) {
                 if (field[i][j].equals(Cell.EMPTY)) {
                     busy = false;
                     break;
-                } else busy = true;
+                }
             }
         }
         return busy;
