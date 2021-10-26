@@ -8,11 +8,11 @@ public class ComputerPlayer extends Player {
     }
 
     @Override
-    void move() {
-        gameMove();
-    }
-
-    private void gameMove() {
+    public void move() {
+//        gameMove();
+//    }
+//
+//    private void gameMove() {
         Player player = Controller.player;
         int size = Field.getSize();
         while (true) {
@@ -23,7 +23,7 @@ public class ComputerPlayer extends Player {
                     Field.fillingField(row, column, player);
                     Field.showField();
                     break;
-                } else gameMove();
+                } else move();
             }
         }
         Controller.changePlayer();

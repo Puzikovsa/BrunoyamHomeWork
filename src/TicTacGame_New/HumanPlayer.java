@@ -10,11 +10,11 @@ public class HumanPlayer extends Player {
     }
 
     @Override
-    void move() {
-        gameMove();
-    }
-
-    private void gameMove() {
+    public void move() {
+//        gameMove();
+//    }
+//
+//    private void gameMove() {
         Player player = Controller.player;
         int row;
         int column;

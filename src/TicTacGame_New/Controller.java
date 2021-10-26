@@ -84,10 +84,12 @@ public class Controller {
     public static void endGame() {
         System.out.println("Игра окончена.");
         System.out.println("Победил " + player.getName());
+        System.exit(0);
     }
 
     public static void endGameBusy(){
         System.out.println("Игра окончена.");
         System.out.println("Ничья!");
+        System.exit(0);
     }
 }
