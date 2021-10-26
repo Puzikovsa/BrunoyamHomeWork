@@ -14,7 +14,9 @@ public class Checks {
 //        if (isFirstColumnWinner()){
 //                check = true;
 //            }
-        if (isRightDiagonalWinner()){
+//        if (isRightDiagonalWinner()){
+//            check = true;
+        if (isLeftDiagonalWinner()){
             check = true;
         }
         return check;
@@ -55,7 +57,7 @@ public class Checks {
 
     public static boolean isSecondColumnWinner(int s){
         boolean column = true;
-        for (int i = 0; i < field[i].length - 1; i++) {
+        for (int i = 0; i < field[i].length; i++) {
             if (!field[i][s].equals(field[i + 1][s])) {
                 column = false;
                 break;
@@ -66,8 +68,8 @@ public class Checks {
 
     public static boolean isRightDiagonalWinner(){
         boolean rightDiagonal = false;
-        for (int i = 0; i < field[i].length - 1; i++) {
-                if (!field[i][i].equals(Cell.EMPTY) && isSecondRightDiagonal(i)) {
+        for (int i = 0; i < field.length; i++) {
+                if (!field[i][i].equals(Cell.EMPTY) && isSecondRightDiagonal()) {
                     rightDiagonal = true;
                     break;
                 }
@@ -75,10 +77,10 @@ public class Checks {
         return rightDiagonal;
     }
 
-    public static boolean isSecondRightDiagonal(int s){
+    public static boolean isSecondRightDiagonal(){
         boolean rightDiagonal = true;
-        for (int i = 0; i < field[i].length - 1; i++) {
-            if(!field[i][s].equals(field[i + 1][s + 1])) {
+        for (int i = 0; i < field.length - 1; i++) {
+            if(!field[i][i].equals(field[i + 1][i + 1])) {
                 rightDiagonal = false;
                 break;
             }
@@ -89,8 +91,8 @@ public class Checks {
     public static boolean isLeftDiagonalWinner(){
         boolean leftDiagonal = true;
         for (int i = field.length - 1; i >= 1; i--) {
-            for (int j = 0; j < field[i].length - 1; j++) {
-                if (!field[0][0].equals(Cell.EMPTY) && isSecondLeftDiagonal(j)) {
+            for (int j = 0; j < field.length - 1; j++) {
+                if (!field[i][i].equals(Cell.EMPTY) && isSecondLeftDiagonal()) {
                     leftDiagonal = false;
                     break;
                 }
@@ -100,10 +102,10 @@ public class Checks {
         return leftDiagonal;
     }
 
-    public static boolean isSecondLeftDiagonal(int s){
+    public static boolean isSecondLeftDiagonal(){
         boolean leftDiagonal = true;
         for (int i = 0; i < field.length - 1; i++) {
-            if (!field[i][s].equals(field[i + 1][s + 1])) {
+            if (!field[i][i].equals(field[i - 1][i - 1])) {
                 leftDiagonal = false;
                 break;
             }
